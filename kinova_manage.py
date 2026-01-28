@@ -3,8 +3,6 @@ import os
 import time
 import threading
 
-# 动态添加 utilities 路径
-# 这样写就非常专业了
 from Kinova_kortex2_Gen3_G3L.api_python.examples import utilities
 
 from kortex_api.autogen.client_stubs.BaseClientRpc import BaseClient
@@ -245,4 +243,4 @@ def test_kinova_manager():
     finally:
         arm.disconnect()
 
-test_kinova_manager()
+# test_kinova_manager()
