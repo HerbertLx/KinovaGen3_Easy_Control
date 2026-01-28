@@ -4,11 +4,8 @@ import time
 import threading
 
 # 动态添加 utilities 路径
-sys.path.insert(0, "/home/cuhk/Documents/visionpro-kinova-rl/Kinova-kortex2_Gen3_G3L/api_python/examples")
-try:
-    import utilities
-except ImportError:
-    print("❌ Cannot find utilities module. Check your sys.path.")
+# 这样写就非常专业了
+from Kinova_kortex2_Gen3_G3L.api_python.examples import utilities
 
 from kortex_api.autogen.client_stubs.BaseClientRpc import BaseClient
 from kortex_api.autogen.client_stubs.BaseCyclicClientRpc import BaseCyclicClient
@@ -248,4 +245,4 @@ def test_kinova_manager():
     finally:
         arm.disconnect()
 
-# test_kinova_manager()
+test_kinova_manager()
